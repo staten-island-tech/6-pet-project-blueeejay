@@ -43,7 +43,7 @@ class hero:
 
     def buy(self, item, x):
         self.inventory.append(item)
-        self.money = self.money - x # also unnecessary </3 
+        self.money = self.money - x # also unnecessary </3 i really enjoy this activity 
         print(self.name, "'s inventory currently has:", self.inventory)
         print(self.name, "spent", x, "and now has", self.money, "credits remaining.") # this was unnecessary i also just wanted to do this. you cant buy things for free even though thatd be awesome 
 
