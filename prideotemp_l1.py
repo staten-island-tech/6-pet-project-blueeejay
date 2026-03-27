@@ -68,9 +68,10 @@ class hero:
             complimentp += 15 
         if "yucky" or "uninspired" in compliment:
             complimentp -= 45 
-        if complimentp > self.__maxcap:
-            complimentp == self.__maxcap
-
+        if self.__esteem > self.__maxcap:
+            self.__esteem = int(self.__maxcap)
+            print(complimentp,self.__maxcap)
+        
     def checkin(self):
         print("You ask", self.name, "how they would define their confidence in their current work using numbers. They reply with", self.__esteem,"out of", self.__maxcap,".")
         
