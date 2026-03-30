@@ -67,10 +67,9 @@ class hero:
         if "perfect" or "vibrant" in compliment:
             complimentp += 15 
         if "yucky" or "uninspired" in compliment:
-            complimentp -= 45 
+            self.__esteem =+ complimentp - 45
         if self.__esteem > self.__maxcap:
             self.__esteem = int(self.__maxcap)
-            print(complimentp,self.__maxcap)
         
     def checkin(self):
         print("You ask", self.name, "how they would define their confidence in their current work using numbers. They reply with", self.__esteem,"out of", self.__maxcap,".")
@@ -85,3 +84,4 @@ class hero:
 Serena = hero("Serena",1400, 50, ["Palette Knife"], 150)
 Serena.play()
 Serena.checkin()
+Serena.buy("500 cinnamon sticks",67.67)
