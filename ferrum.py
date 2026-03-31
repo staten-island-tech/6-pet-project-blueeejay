@@ -1,4 +1,4 @@
-sushi_orders = [
+""" sushi_orders = [
     {"name": "California Roll", "price": 8},
     {"name": "Spicy Tuna Roll", "price": 10},
     {"name": "Salmon Nigiri", "price": 6},
@@ -52,4 +52,35 @@ def reciepts(EATEN):
     for sushi, value in truereceipt.items():
         price = value['price'] * value['qty']
         print(sushi, value['qty'], price)
-reciepts(sushi_orders)
+reciepts(sushi_orders) """
+
+wards = {
+    "Cardiology":  ["Alice", "Bob", "Carol"],
+    "Neurology":   ["Diana", "Eve"],
+    "Orthopedics": ["Frank", "Grace", "Hank"],
+    "Oncology":    ["Ivy", "Bob"]
+}
+# this is called a re
+def findname(staffname): 
+    staff = {}
+    for wardKEY, doctors in wards.items():
+        for doctor in doctors:
+            if staffname == doctor:
+                staff = {wardKEY}
+    print(staff)
+findname("Bob")
+
+
+
+findname("Bob")
+def findname(staffname): 
+    staff = {}
+    for wardKEY, doctors in wards.items():
+        for doctor in doctors:
+            if staffname == doctor:
+                staff[doctor] = {
+                'works in' : wardKEY
+                }
+    for department in staff: 
+     print(staff)
+findname("Bob")
