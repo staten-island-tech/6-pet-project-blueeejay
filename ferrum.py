@@ -23,17 +23,33 @@ sushi_orders = [
 # reciepts(sushi_orders)
 
 
+# def reciepts(EATEN):
+#     truereciept = {}
+#     total = 0
+#     for item in EATEN: 
+#         if item["name"] in truereciept:
+#             'quantity' =+ 1 
+#         else:
+#             truereciept[item['name']] = {
+#             'price': item['price']
+#             "quantity": 1 }
+
+#     print(truereciept, total)
+# reciepts(sushi_orders)
+
+
 def reciepts(EATEN):
-    truereciept = {}
+    truereceipt = {}
     total = 0
     for sushi in EATEN: 
-        if sushi["name"] not in truereciept:
-            truereciept[sushi['name']] = {
+        if sushi["name"]  in truereceipt:
+            truereceipt[sushi['name']]['qty'] += 1
+        else:
+             truereceipt[sushi['name']] = {
             'price': sushi['price'],
             'qty': 1
-            }
-        else:
-            sushi['qty'] += 1 
-
-    print(truereciept, total)
+             }
+    for sushi, value in truereceipt.items():
+        price = value['price'] * value['qty']
+        print(sushi, value['qty'], price)
 reciepts(sushi_orders)
