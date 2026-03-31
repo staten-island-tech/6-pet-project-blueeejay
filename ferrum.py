@@ -26,13 +26,14 @@ sushi_orders = [
 def reciepts(EATEN):
     truereciept = {}
     total = 0
-    for item in EATEN: 
-        if item["name"] in truereciept:
-            'quantity' =+ 1 
+    for sushi in EATEN: 
+        if sushi["name"] not in truereciept:
+            truereciept[sushi['name']] = {
+            'price': sushi['price'],
+            'qty': 1
+            }
         else:
-            truereciept[item['name']] = {
-            'price': item['price']
-            "quantity": 1 }
+            sushi['qty'] += 1 
 
     print(truereciept, total)
 reciepts(sushi_orders)
