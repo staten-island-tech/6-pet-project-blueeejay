@@ -60,19 +60,19 @@ wards = {
     "Orthopedics": ["Frank", "Grace", "Hank"],
     "Oncology":    ["Ivy", "Bob"]
 }
-# this is called a re
-def findname(staffname): 
-    staff = {}
-    for wardKEY, doctors in wards.items():
-        for doctor in doctors:
-            if staffname == doctor:
-                staff = {wardKEY}
-    print(staff)
-findname("Bob")
+# # this is called a re
+# def findname(staffname): 
+#     staff = {}
+#     for wardKEY, doctors in wards.items():
+#         for doctor in doctors:
+#             if staffname == doctor:
+#                 staff = {wardKEY}
+#     print(staff)
+# findname("Bob")
 
 
 
-findname("Bob")
+
 def findname(staffname): 
     staff = {}
     for wardKEY, doctors in wards.items():
