@@ -75,12 +75,18 @@ wards = {
 
 def findname(staffname): 
     staff = {}
+    depworked=[] 
+    x = 0 
     for wardKEY, doctors in wards.items():
-        for doctor in doctors:
-            if staffname == doctor:
-                staff[doctor] = {
-                'works in' : wardKEY
-                }
-    for department in staff: 
-     print(staff)
-findname("Bob")
+            for doctor in doctors:
+                if doctor not in  staff:
+                    staff[doctor] = [wardKEY]
+                else:
+                    staff[doctor].append(wardKEY)
+                    """ depworked.append(wards[wardKEY])
+                    staff == {
+                    "docname" : wards[wardKEY[x]],
+                    "employed_by": [wardKEY] }"""
+                    
+    print(staff[staffname])
+findname("Ivy") 
