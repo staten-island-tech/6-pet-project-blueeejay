@@ -63,13 +63,20 @@ class hero:
         print(self.name, "is working on a new project. When defined numerically, their confidence in their work measures:", self.__esteem, "out of", self.__maxcap,".")
         compliment = (input("Tell them something about their current artwork:"))
         complimentp = len(compliment) * 1.5 
-        self.__esteem += complimentp
+        print(complimentp)
         if "perfect" or "vibrant" in compliment:
-            complimentp += 15 
-        if "yucky" or "uninspired" in compliment:
+            self.__esteem = (complimentp + 15) + self.__esteem
+            print(complimentp)
+        elif "yucky" or "uninspired" in compliment:
             self.__esteem =+ complimentp - 45
+            print(complimentp)
+        # max/min corrector. ensures the value is never negative or over self.__maxcap 
         if self.__esteem > self.__maxcap:
             self.__esteem = int(self.__maxcap)
+            print(complimentp)
+        elif  self.__esteem < 0:
+            self.__esteem = 0
+            print(complimentp)
         
     def checkin(self):
         print("You ask", self.name, "how they would define their confidence in their current work using numbers. They reply with", self.__esteem,"out of", self.__maxcap,".")
@@ -84,4 +91,4 @@ class hero:
 Serena = hero("Serena",1400, 50, ["Palette Knife"], 150)
 Serena.play()
 Serena.checkin()
-Serena.buy("500 cinnamon sticks",67.67)
+
