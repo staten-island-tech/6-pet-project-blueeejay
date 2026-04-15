@@ -48,7 +48,11 @@ class hero:
         print(self.name, "spent", x, "and now has", self.money, "credits remaining.") # this was unnecessary i also just wanted to do this. you cant buy things for free even though thatd be awesome 
 
 Serena = hero("Serena",1400, 50, ["Palette Knife"])
-Serena.buy("Tyrian Purple Acrylic Paint", 45)  """
+Serena.buy("Tyrian Purple Acrylic Paint", 45)  """ 
+
+
+# serena d'angelus my goat ud be so much cooler if graham mcniel wasn't your author !!! and u happened to b dating his self insert... sighhhhh
+#shes  under my custody now and the self insert character also. but he isnt a self insert for graham  
 
 # activity 1 
 class hero:
@@ -62,17 +66,20 @@ class hero:
     def play(self):
         print(self.name, "is working on a new project. When defined numerically, their confidence in their work measures:", self.__esteem, "out of", self.__maxcap,".")
         compliment = (input("Tell them something about their current artwork:"))
+
         complimentp = len(compliment) * 2.5
-        print("initial count", complimentp)
-        if "perfect" or "vibrant" in compliment:
+        print("initial count", complimentp) # using this to diagnose code error  
+
+        if "perfect" in compliment or "vibrant" in compliment:
             self.__esteem = (complimentp + 15) + self.__esteem
-            print("perfect modifier", complimentp)
+            print("perfect modifier", complimentp) # using this to diagnose code error 
         elif "yucky" or "uninspired" in compliment:
             self.__esteem =+ complimentp - 45
-            print("bad modifier", complimentp)
+            print("bad modifier", complimentp) # using this to diagnose code error 
         else:
             self.__esteem += complimentp
-            print(self.__esteem, complimentp)
+            print(self.__esteem, complimentp) # using this to diagnose code error 
+        # THE ELSE SHOULD BE TRUE FOR MOST VALUES BUT THE FIRST ONE IS FOR ALL?? I DO NOT KNOW WHY ITS AN IF STATEMENT
         
         # max/min corrector. ensures the value is never negative or over self.__maxcap 
         if self.__esteem > self.__maxcap:
@@ -84,7 +91,6 @@ class hero:
         
     def checkin(self):
         print("You ask", self.name, "how they would define their confidence in their current work using numbers. They reply with",self.__esteem,"out of",self.__maxcap,".")
-        
 
     def buy(self, item, x):
         self.inventory.append(item)
