@@ -56,7 +56,7 @@ Serena.buy("Tyrian Purple Acrylic Paint", 45)  """
 
 # activity 1 
 class hero:
-    def __init__(self, name, money, esteem, inventory, maxcap): #max cap is unneccesary i just wanted to make the emotion system make more sense to me 
+    def __init__(self, name, money, esteem, inventory, maxcap, species): #max cap is unneccesary i just wanted to make the emotion system make more sense to me 
         self.name = name
         self.__money = money
         self.inventory = inventory
@@ -66,28 +66,25 @@ class hero:
     def play(self):
         print(self.name, "is working on a new project. When defined numerically, their confidence in their work measures:", self.__esteem, "out of", self.__maxcap,".")
         compliment = (input("Tell them something about their current artwork:"))
-
-        complimentp = len(compliment) * 2.5
-        print("initial count", complimentp) # using this to diagnose code error  
+        complimentp = len(compliment) * 2.5 
 
         if "perfect" in compliment or "vibrant" in compliment:
             self.__esteem = (complimentp + 15) + self.__esteem
-            print("perfect modifier", complimentp) # using this to diagnose code error 
         elif "yucky" in compliment or "uninspired" in compliment:
             self.__esteem =+ complimentp - 45
-            print("bad modifier", complimentp) # using this to diagnose code error 
         else:
             self.__esteem += complimentp
-            print(self.__esteem, complimentp) # using this to diagnose code error 
         # THE ELSE SHOULD BE TRUE FOR MOST VALUES BUT THE FIRST ONE IS FOR ALL?? I DO NOT KNOW WHY ITS AN IF STATEMENT
         
         # max/min corrector. ensures the value is never negative or over self.__maxcap 
         if self.__esteem > self.__maxcap:
             self.__esteem = int(self.__maxcap)
-            print(complimentp)
         elif  self.__esteem < 0:
             self.__esteem = 0
-            print(complimentp)
+    def interrogate(self, species):
+        print("You examine", self.name, "to determine if they are 'touched' by the supernatural.")
+        print("You a")
+  
         
     def checkin(self):
         print("You ask", self.name, "how they would define their confidence in their current work using numbers. They reply with",self.__esteem,"out of",self.__maxcap,".")
@@ -98,7 +95,15 @@ class hero:
         print(self.name, "'s inventory currently has:", self.inventory)
         print(self.name, "spent", x, "and now has", self.__money, "credits remaining.")
 
-Serena = hero("Serena",1400, 50, ["Palette Knife"], 150)
+Serena = hero("Serena D'Angelus",1400, 50, ["Palette Knife", "Pict-Recorder", 150],150)
 Serena.play()
 Serena.checkin()
+
+Ostian = hero("Ostian Delafor")
+Fulgrim = hero("Fulgrim of Chemos",52300,156, ["the Blade of the Laer", "the Fireblade", "Hairties","Stone Chisel", "plot armor"], 300)
+Aseneca = hero("Coralline Aseneca",12300,["Vox-Thief", "Fountain Pen Set"])
+
+Markus = hero("Markus", 0.53, 350, ["X-Box Controller","Stake Jacket", "Stilts-turned-Crutches"], 400)
+Kitten = hero("Kitten", 43, 170, ["Ski Mask and Goggles","Homemade Polearm"], 200)
+
 
