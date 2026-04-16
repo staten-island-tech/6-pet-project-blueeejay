@@ -73,7 +73,7 @@ class hero:
         if "perfect" in compliment or "vibrant" in compliment:
             self.__esteem = (complimentp + 15) + self.__esteem
             print("perfect modifier", complimentp) # using this to diagnose code error 
-        elif "yucky" or "uninspired" in compliment:
+        elif "yucky" in compliment or "uninspired" in compliment:
             self.__esteem =+ complimentp - 45
             print("bad modifier", complimentp) # using this to diagnose code error 
         else:
