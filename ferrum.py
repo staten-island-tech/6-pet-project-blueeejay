@@ -78,9 +78,9 @@ def findname(staffname):
     depworked=[] 
     x = 0 
     for wardKEY, doctors in wards.items():
-            for doctor in doctors:
-                if doctor not in  staff:
-                    staff[doctor] = [wardKEY]
+            for doctor in doctors: # for
+                if doctor not in  staff: # not in comes first because this step; createda list 
+                    staff[doctor] = [wardKEY] # creates dictionary where the key is doctor name, and the definition is a list because it is within brackets. 
                 else:
                     staff[doctor].append(wardKEY)
                     """ depworked.append(wards[wardKEY])

@@ -80,7 +80,7 @@ class Administrator(User):
     def manage_system(self):
         return f"{self.name} ({self.role}) is managing the system." """
 # extending parent methods 
-class User:
+""" class User:
     def __init__(self, name, email):
         self.name = name
         self.email = email
@@ -107,4 +107,4 @@ class Teacher(User):
         return f"{base_info}, Subject: {self.subject}"
 
 my_teacher = Teacher("Mr. Brown", "brown@example.com", "Science")
-print(my_teacher.display_info())  # Output: User: Mr. Brown, Email: brown@example.com, Subject: Science
+print(my_teacher.display_info())  # Output: User: Mr. Brown, Email: brown@example.com, Subject: Science """
