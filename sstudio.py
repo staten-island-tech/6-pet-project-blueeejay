@@ -2,12 +2,12 @@
 d6 = [1,2,3,4,5,6]
 import random
 class hero:
-    def __init__(self, name, money, esteem, inventory, maxcap, species): #max cap is unneccesary i just wanted to make the emotion system make more sense to me 
+    def __init__(self, name, money, esteem, inventory, maxcap, heritage): #max cap is unneccesary i just wanted to make the emotion system make more sense to me 
         self.name = name
         self.__money = money
         self.inventory = inventory
         self.__esteem = esteem
-        self.species = species
+        self.heritage = heritage
         self.__maxcap = maxcap # the maximum confidence/positivity that hero can feel 
 
     def play(self):
@@ -29,14 +29,14 @@ class hero:
         elif  self.__esteem < 0:
             self.__esteem = 0
         
-    def bloodtest(self, species):
+    def bloodtest(self):
             print("You examine", self.name, "using a blood test to determine if they are 'touched' by the supernatural.")
             dicevalue = int(random.choice(d6)) 
-            if (self.species).lower == "human":
-                print("Your test is conclusive. You are able to determine", self.name, "has", self.species, "heritage, as expected!")
+            if (self.heritage).lower == "human":
+                print("Your test is conclusive. You are able to determine", self.name, "has", self.heritage, "heritage, as expected!")
             elif dicevalue >= 5:
-                print("Your test is conclusive. You are able to determine", self.name, "has", self.species , "heritage.")
-            elif dicevalue >5:
+                print("Your test is conclusive. You are able to determine", self.name, "has", self.heritage , "heritage.")
+            else:
                 print("You are unable to determine the nature or type of their blood, but it's definetely unusual.")
 
     def checkin(self):
@@ -50,10 +50,8 @@ class hero:
 
 
 Serena = hero("Serena D'Angelus",1400, 50, ["Palette Knife", "Pict-Recorder", 150],150, "Human")
-
 Fulgrim = hero("Fulgrim of Chemos",52300,156, ["the Blade of the Laer", "the Fireblade", "Hairties","Stone Chisel", "plot armor"], 300, "Post-Human")
 Kevin = hero("Kevin",0.45,300,["Radio"], 400, "Tremere, Kindred")
-Serena.bloodtest()
 Kevin.bloodtest()
 
 
