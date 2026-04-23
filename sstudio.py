@@ -31,9 +31,11 @@ class hero:
             self.__esteem = 0
 
     def skilltraining(self):
-        for i in self.inventory
-        time = int(input("In order to build this hero's skills with," , you decide to alot them [x] amount of hours to train. Type [x], the amount of hours, below:"))
-        for 
+        for index, x in enumerate(self.inventory):
+            print(index, ":", self.inventory[index])
+        tool = int(input("Input the number corresponding to the type you are searching for:"))
+        time = int(input("In order to build this hero's skills, you ask them to equip themselves with", self.inventory[tool], "and alot them [x] amount of hours to train. Type [x], the amount of hours, below:"))
+        for time
          
          
     def bloodtest(self):
@@ -60,8 +62,9 @@ Serena = hero("Serena D'Angelus",1400, 50, ["Palette Knife", "Pict-Recorder", 15
 Fulgrim = hero("Fulgrim of Chemos",52300,156, ["the Blade of the Laer", "the Fireblade", "Hairties","Stone Chisel", "plot armor"], 300, "Post-Human",5) # Heresy 
 Kevin = hero("Kevin",0.45,300,["Radio"], 400, "Tremere, Kindred", 4) # Hunter: TP
 Kitten = hero("Kitten", 43, 170, ["Ski Mask and Goggles","Homemade Polearm"], 200, "Human", 3) # HTP
-Markus = hero("Markus", 0.53, 350, ["X-Box Controller","Stake Jacket", "Stilts-turned-Crutches"], 400, 4) # HTP 
+Markus = hero("Markus", 0.53, 350, ["X-Box Controller","Stake Jacket", "Stilts-turned-Crutches"], 400, "Human, Mage", 4) # HTP 
 Kevin.bloodtest()
+Markus.skilltraining()
 
 
 """ Fulgrim = hero("Fulgrim of Chemos",52300,156, ["the Blade of the Laer", "the Fireblade", "Hairties","Stone Chisel", "plot armor"], 300)
