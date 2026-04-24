@@ -31,11 +31,24 @@ class hero:
             self.__esteem = 0
 
     def skilltraining(self):
+        print(self.name,"'s current skill level is:", self.__fightskill)
         for index, x in enumerate(self.inventory):
             print(index, ":", self.inventory[index])
         tool = int(input("Input the number corresponding to the type you are searching for:"))
-        time = int(input("In order to build this hero's skills, you ask them to equip themselves with", self.inventory[tool], "and alot them [x] amount of hours to train. Type [x], the amount of hours, below:"))
-        for time
+        time = (input("In order to build this hero's skills with their chosen tool, you alot them [x] amount of hours to train. Type [x], the amount of hours, below:"))
+        timeg = int(time)
+        traininglog = []
+        print(time)
+        for term in (timeg):
+             diceroll = int(random.choice(d6))
+             traininglog.append(diceroll)
+             print(diceroll, traininglog)
+        if sum(traininglog) / timeg >= 4:
+             self.__fightskill += 1 
+             print("Their training session was successful! Their skill is now level", self.__fightskill)
+        else: 
+             print("Their training session was not incredibly productive, so their skill level has remained the same.")
+
          
          
     def bloodtest(self):
