@@ -39,7 +39,7 @@ class hero:
         timeg = int(time)
         traininglog = []
         print(time)
-        for term in (timeg):
+        for range in (timeg):
              diceroll = int(random.choice(d6))
              traininglog.append(diceroll)
              print(diceroll, traininglog)
