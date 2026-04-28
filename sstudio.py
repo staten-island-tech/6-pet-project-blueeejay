@@ -30,24 +30,24 @@ class hero:
         elif  self.__esteem < 0:
             self.__esteem = 0
 
-    def skilltraining(self):
-        print(self.name,"'s current skill level is:", self.__fightskill)
-        for index, x in enumerate(self.inventory):
-            print(index, ":", self.inventory[index])
-        tool = int(input("Input the number corresponding to the type you are searching for:"))
-        time = (input("In order to build this hero's skills with their chosen tool, you alot them [x] amount of hours to train. Type [x], the amount of hours, below:"))
-        timeg = int(time)
-        traininglog = []
-        print(time)
-        for range in (timeg):
-             diceroll = int(random.choice(d6))
-             traininglog.append(diceroll)
-             print(diceroll, traininglog)
-        if sum(traininglog) / timeg >= 4:
-             self.__fightskill += 1 
-             print("Their training session was successful! Their skill is now level", self.__fightskill)
-        else: 
-             print("Their training session was not incredibly productive, so their skill level has remained the same.")
+    # def skilltraining(self):
+    #     print(self.name,"'s current skill level is:", self.__fightskill)
+    #     for index, x in enumerate(self.inventory):
+    #         print(index, ":", self.inventory[index])
+    #     tool = int(input("Input the number corresponding to the type you are searching for:"))
+    #     time = (input("In order to build this hero's skills with their chosen tool, you alot them [x] amount of hours to train. Type [x], the amount of hours, below:"))
+    #     timeg = int(time)
+    #     traininglog = []
+    #     print(time)
+    #     for range in (timeg):
+    #          diceroll = int(random.choice(d6))
+    #          traininglog.append(diceroll)
+    #          print(diceroll, traininglog)
+    #     if sum(traininglog) / timeg >= 4:
+    #          self.__fightskill += 1 
+    #          print("Their training session was successful! Their skill is now level", self.__fightskill)
+    #     else: 
+    #          print("Their training session was not incredibly productive, so their skill level has remained the same.")
 
          
          
@@ -77,7 +77,7 @@ Kevin = hero("Kevin",0.45,300,["Radio"], 400, "Tremere, Kindred", 4) # Hunter: T
 Kitten = hero("Kitten", 43, 170, ["Ski Mask and Goggles","Homemade Polearm"], 200, "Human", 3) # HTP
 Markus = hero("Markus", 0.53, 350, ["X-Box Controller","Stake Jacket", "Stilts-turned-Crutches"], 400, "Human, Mage", 4) # HTP 
 Kevin.bloodtest()
-Markus.skilltraining()
+# Markus.skilltraining()
 
 
 """ Fulgrim = hero("Fulgrim of Chemos",52300,156, ["the Blade of the Laer", "the Fireblade", "Hairties","Stone Chisel", "plot armor"], 300)
