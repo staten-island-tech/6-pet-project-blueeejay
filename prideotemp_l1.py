@@ -52,7 +52,7 @@ Serena.buy("Tyrian Purple Acrylic Paint", 45)  """
 
 
 # serena d'angelus my goat ud be so much cooler if graham mcniel wasn't your author !!! and u happened to NOt b dating his self insert... sighhhhh
-#shes  under my custody now and the self insert character also. but he isnt a self insert for graham  
+#shes under my custody now and the self insert character also. but he isnt a self insert for graham  anymore. 
 
 # activity 1 
 class hero:
@@ -61,7 +61,7 @@ class hero:
         self.__money = money
         self.inventory = inventory
         self.__esteem = esteem
-        self.__maxcap = maxcap # the maximum confidence/positivity that hero can feel 
+        self.__maxcap = maxcap # the maximum esteem that hero can feel 
 
     def play(self):
         print(self.name, "is working on a new project. When defined numerically, their confidence in their work measures:", self.__esteem, "out of", self.__maxcap,".")
@@ -94,11 +94,5 @@ Serena = hero("Serena D'Angelus",1400, 50, ["Palette Knife", "Pict-Recorder", 15
 Serena.play()
 Serena.checkin()
 
-
-""" Fulgrim = hero("Fulgrim of Chemos",52300,156, ["the Blade of the Laer", "the Fireblade", "Hairties","Stone Chisel", "plot armor"], 300)
-Aseneca = hero("Coralline Aseneca",12300, 140, ["Vox-Thief", "Fountain Pen Set"], 243)
-
-Markus = hero("Markus", 0.53, 350, ["X-Box Controller","Stake Jacket", "Stilts-turned-Crutches"], 400)
-Kitten = hero("Kitten", 43, 170, ["Ski Mask and Goggles","Homemade Polearm"], 200) """
 
 
