@@ -51,7 +51,7 @@ Serena = hero("Serena",1400, 50, ["Palette Knife"])
 Serena.buy("Tyrian Purple Acrylic Paint", 45)  """ 
 
 
-# serena d'angelus my goat ud be so much cooler if graham mcniel wasn't your author !!! and u happened to b dating his self insert... sighhhhh
+# serena d'angelus my goat ud be so much cooler if graham mcniel wasn't your author !!! and u happened to NOt b dating his self insert... sighhhhh
 #shes  under my custody now and the self insert character also. but he isnt a self insert for graham  
 
 # activity 1 
