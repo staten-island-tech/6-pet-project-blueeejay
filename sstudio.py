@@ -1,4 +1,7 @@
-# hero thingy but i added in a function similar to rolling a dice to determine species of character 
+# hero thingy but i added in a function similar to rolling a dice to determine species of character \
+# eevery time i got lost on the API thing i came here and tried to add another function 
+# my actual classword is in (prideotemp_l1.py), and my classes function notes is in firebird_l2.py
+# each named after fictional warships from the same novel serena is from <333. the book series SUCKS though 
 d6 = [1,2,3,4,5,6]
 import random
 class hero:
